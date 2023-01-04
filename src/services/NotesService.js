@@ -3,11 +3,18 @@ import httpClient from "../http-common";
 
 const getAll = () => {
 
-   return httpClient.get("/note");
+   return httpClient.get("/notes");
 
     
 }
 
+const create = data  =>{
 
+   return httpClient.post("/notes",data);
+}
 
-export default { getAll}  ;
+const get = id => {
+   return httpClient.get(`/notes/${id}`);
+}
+
+export default { getAll, create, get}  ;
