@@ -19,6 +19,7 @@ function App() {
 <Switch>
         <Route exact  path="/" component={NoteList} />
         <Route exact  path="/add" component={Add} />
+        <Route exact  path="/notes/edit/:id" component={Add} />
         <Route exact  path="/notes/:id" component={NoteDetails} />
          <Route path="*" component={NotFound} />
  
